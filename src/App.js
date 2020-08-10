@@ -4,6 +4,8 @@ import './App.css';
 import  User  from "./components/User";
 import UniqueId from 'react-html-id'
 
+import First from './components/First'
+
 class App extends Component {
   constructor(){
     super()
@@ -48,10 +50,14 @@ class App extends Component {
           {
             this.state.users.map((user,index) =>{
               return(
+                <div>
+                  <First />
                 <User key={user.id} name={user.name} age={user.age} 
                       deleteEvent={this.deleteUser.bind(this,index)}
                       changeEvent={this.changeUser.bind(this,user.id)}
                 />
+                
+                </div>
               )
             } )
           }
