@@ -1,7 +1,3 @@
-
-
-React.render(<Button />, document.getElementById('app'));
-
 import React, { Component } from 'react'
 
 export default class First extends Component {
